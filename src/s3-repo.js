@@ -1,6 +1,8 @@
 'use strict'
 
+const AWS = require("aws-sdk");
 const S3 = require('aws-sdk/clients/s3')
+const ep = new AWS.Endpoint('s3.wasabisys.com');
 const IPFSRepo = require('ipfs-repo')
 
 // A mock lock
@@ -59,6 +61,7 @@ const createRepo = (S3Store, options, s3Options) => {
 
   const storeConfig = {
     s3: new S3({
+      endpoint: ep,
       params: {
         Bucket: bucket
       },
