@@ -2,7 +2,7 @@
 
 const AWS = require("aws-sdk");
 const S3 = require('aws-sdk/clients/s3')
-const ep = new AWS.Endpoint('s3.wasabisys.com');
+const ep = new AWS.Endpoint('s3.eu-central-1.wasabisys.com');
 const IPFSRepo = require('ipfs-repo')
 
 // A mock lock
